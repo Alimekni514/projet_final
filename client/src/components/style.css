@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Cairo:wght@200&family=Comfortaa:wght@300&family=Courgette&family=Gentium+Book+Plus&family=Joan&family=Montserrat:ital,wght@1,300&family=Rubik:ital,wght@0,300;1,300&family=Space+Grotesk:wght@700&display=swap');
+.logo{
+    color:rgb(142, 12, 12);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 120px;
+}
