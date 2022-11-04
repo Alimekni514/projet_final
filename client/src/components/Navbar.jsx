@@ -6,16 +6,15 @@ export default function Navbar() {
   const {user,setUser}=useContext(userContext);
   const navigate=useNavigate();
     const login =()=>{
-    
-    navigate("/SignIn");
-
+   setTimeout(()=> {
+        navigate("/SignIn")
+   },1000)
     }
     const logout=()=>{
         setUser(null)
     }
     const signUp=()=>{
       navigate("/SignUp");
-
     }
   return (
     <div className='navbar'>

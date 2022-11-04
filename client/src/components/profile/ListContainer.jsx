@@ -1,9 +1,9 @@
 import React from 'react'
-import SwiperContainer from '../SwiperContainer'
+import SwiperContainerProfile from './SwiperContainerProfile'
 export default function ListContainer({heading,list}) {
   return (
     <div>
-    <SwiperContainer heading={heading} list={list}/>
+    <SwiperContainerProfile heading={heading} list={list}/>
     </div>
   )
 }

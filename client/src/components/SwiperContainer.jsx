@@ -1,12 +1,11 @@
 import React from 'react'
 import { Swiper,SwiperSlide} from 'swiper/react';
-
-import MediaContainer from './homepage/MediaContainer';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import MediaContainer from '../components/homepage/MediaContainer'
 export default function SwiperContainer({heading,list}) {
   return (
     
@@ -22,7 +21,7 @@ export default function SwiperContainer({heading,list}) {
 
 list &&
 list.map(movie =>
-  <SwiperSlide key={movie.id}> <MediaContainer title={movie.title} rate={movie.vote_average} desc={movie.overview} img={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} id={movie.id}/></SwiperSlide>
+  <SwiperSlide key={movie.id}> <MediaContainer title={movie.title} rate={movie.rateuser} desc={movie.overview} id={movie.id} img={`https://image.tmdb.org/t/p/original/${movie.poster_path} ` } /></SwiperSlide>
 )
 
 }
