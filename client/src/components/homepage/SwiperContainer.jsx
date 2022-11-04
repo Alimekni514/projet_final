@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import MediaContainer from '../components/homepage/MediaContainer'
+import MediaContainer from '../global components/MediaContainer'
 export default function SwiperContainer({heading,list}) {
   return (
     

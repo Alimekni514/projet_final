@@ -1,8 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
-import ListContainer from "../components/profile/ListContainer";
+import{WatchedList, ListContainer} from "../components/profile/index";
 import rateContext from "../contexts/RateContext";
 import MovieContext from "../contexts/MovieContext";
+import WatchContext from "../contexts/WatchContext"
+import userContext from '../contexts/UserContext';
 export default function Profile() {
+  const {user}=useContext(userContext);
   const { ratee } = useContext(rateContext);
   const [watchmovie, setwatch] = useState();
   const [rated, setrated] = useState();
@@ -39,9 +42,12 @@ export default function Profile() {
 
   return (
     <div>
+      <h1>{user}</h1>
       <MovieContext.Provider value={{ rated, setrated }}>
-        <ListContainer heading={"watched Movie"} list={watchmovie} />
+        <WatchContext.Provider value={{watchmovie, setwatch}}>
+        <WatchedList heading={"watched Movie"} list={watchmovie} />
         <ListContainer heading={"Rated Movie"} list={rated} />
+        </WatchContext.Provider>
       </MovieContext.Provider>
     </div>
   );

@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import {Navbar} from '../components/global components/index'
 import style from './style.css'
 import dahmer from '../img/dahmer.mp4'
-import SwiperContainer from '../components/SwiperContainer'
+import {SwiperContainer} from '../components/homepage/index'
 import { useEffect, useState } from 'react'
 export default function Homepage() {
   const [url1, setUrl1] = useState('')

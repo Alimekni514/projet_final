@@ -1,9 +1,9 @@
-import React ,{useContext}from 'react'
-import userContext from '../contexts/UserContext';
+import React from 'react'
 export default function TvShows() {
-  const {user,setUser}=useContext(userContext);
   return (
-    <>TvShows
-    <h1>{user}</h1></>
+    <>
+    
+    
+    </>
   )
 }
