@@ -67,3 +67,8 @@
     .movie:hover::after {
         height: 100%;
       }
+
+      .search-container{
+        display: flex;
+        align-items: center;
+      }

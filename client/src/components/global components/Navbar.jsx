@@ -1,10 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import { NavLink,useNavigate } from 'react-router-dom';
 import userContext from '../../contexts/UserContext';
+import {FaSearch} from 'react-icons/fa'
 import style from './style.css'
+import { useState } from 'react';
+import SearchBar from './SearchBar';
 export default function Navbar() {
   const {user,setUser}=useContext(userContext);
   const navigate=useNavigate();
+ 
+ 
+  
     const login =()=>{
    setTimeout(()=> {
         navigate("/SignIn")
@@ -26,7 +32,13 @@ export default function Navbar() {
        <NavLink to={'/Movies'}> Movies</NavLink>
        <NavLink to={'/TvShows'}> Tv Shows</NavLink>
        <NavLink to={'/WatchTogether'}> Watch Together</NavLink>
-       <NavLink to={'/Filtre'}> Filtre</NavLink>
+       <div className='search-container'>
+       <SearchBar/>
+       </div>
+
+       {
+        !user? <></>:<h4>{user}</h4>
+       }
        {
         !user ? <button onClick={signUp}> Sign Up</button>
         :<></>
@@ -39,3 +51,4 @@ export default function Navbar() {
     </div>
   )
 }
+
