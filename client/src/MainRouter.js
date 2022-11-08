@@ -5,15 +5,18 @@ import { Homepage, TvShows, Movies, WatchTogether, Profile, SignIn, SignUp, Erro
 import UserContext from './contexts/UserContext'
 import RateContext from './contexts/RateContext'
 import SearchContext from "./contexts/SearchContext";
+import ResearchContext from "./contexts/ResearchContext";
 import { useState } from "react";
 export default function MainRouter() {
     const [user, setUser] = useState(null)
     const [ratee, setRate] = useState([])
     const [search,setsearch]=useState([])
+    const [research,setresearch]=useState([])
     return (
         <UserContext.Provider value={{ user, setUser }}>
             <RateContext.Provider value={{ ratee, setRate }}>
             <SearchContext.Provider value={{search,setsearch }}>
+                <ResearchContext.Provider value={{research,setresearch}}>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="/TvShows" element={
@@ -37,6 +40,7 @@ export default function MainRouter() {
                     <Route path="/authorisation-error" element={<Errors />} />
                     <Route path="/actors" element={<Actors />} />
                 </Routes>
+                </ResearchContext.Provider>
                 </SearchContext.Provider>
             </RateContext.Provider>
         </UserContext.Provider>
