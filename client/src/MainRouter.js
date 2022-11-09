@@ -12,11 +12,13 @@ export default function MainRouter() {
     const [ratee, setRate] = useState([])
     const [search,setsearch]=useState([])
     const [research,setresearch]=useState([])
+    const [time,setTime]=useState('')
     return (
         <UserContext.Provider value={{ user, setUser }}>
             <RateContext.Provider value={{ ratee, setRate }}>
             <SearchContext.Provider value={{search,setsearch }}>
                 <ResearchContext.Provider value={{research,setresearch}}>
+    
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="/TvShows" element={
