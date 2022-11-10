@@ -1,3 +1,42 @@
+/*Navbar styling*/
+.navbar_main{
+    font-family: 'Ubuntu';
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: black;
+}
+.netflix_logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 50px;
+}
+
+.nav_right{
+    position: static;
+    color: white;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlinks {
+display: flex;
+justify-content: space-between;
+}
+
+
+
+
 
 
 .movie{
