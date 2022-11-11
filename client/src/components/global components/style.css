@@ -33,6 +33,46 @@
 display: flex;
 justify-content: space-between;
 }
+.navlinks a {
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:10px 20px;
+    
+}
+.navlinks a:hover {
+    color: #00ddf9;
+}
+.searchbar {
+    display: flex;
+    align-items:center;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+.searchbar input  {
+    display: none;
+    padding:5px 10px;
+    border-radius:2px;
+    background-color:black;
+    color:white;
+    outline:none;
+    border:1px solid rgb(70, 70, 70);
+    width:90%;
+}
+
+.searchbar input::placeholder {
+    font-size:16px
+}
+.buttons-nav {
+    display: flex;
+
+}
+.buttons-nav  button  {
+    padding:6px 15px;
+        border-radius: 5px;
+        margin:0px 15px;
+
+}
 
 
 

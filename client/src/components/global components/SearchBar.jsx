@@ -8,6 +8,11 @@ export default function SearchBar() {
     const {setsearch}=useContext(SearchContext)
     const {setresearch}=useContext(ResearchContext)
     const navigate=useNavigate();
+    const handleEnter=(e)=> {
+      if (e.key === 'Enter' || e.keyCode === 13) {
+        HandleSearch();
+    }
+    }
     const HandleSearch=async()=>{
       const Mres=await fetch(`https://api.themoviedb.org/3/search/movie?api_key=b3ec5aad46e51258856256128c47b00c&language=en-US&page=1&include_adult=false&query=${input}`)
       const Mpro= await Mres.json();
@@ -22,9 +27,9 @@ export default function SearchBar() {
 
      }
   return (
-    <div >
-    <input type='text' placeholder='search movie , Tv Shows ,actors' value={input} onChange={(e)=>{setinput(e.target.value) }}/>
-     <FaSearch onClick={()=>HandleSearch()}/>
+    <div className='searchbar'>
+    <input type='text' placeholder='search movie , Tv Shows' value={input} onChange={(e)=>{setinput(e.target.value) }} onKeyUp={()=>handleEnter()}/>
+     <FaSearch  className="searchicon"style={{fontSize:"24px"}} onClick={()=>HandleSearch()}/>
     </div>
   )
 }

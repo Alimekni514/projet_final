@@ -43,18 +43,21 @@ export default function Navbar() {
        <div className='search-container'>
           <SearchBar />
         </div>
-
-        {
+          <div className='buttons-nav'>
+          {
           !user ? <></> : <h4>{user}</h4>
         }
         {
-          !user ? <button onClick={signUp}> Sign Up</button>
+          !user ? <button className="signup"onClick={signUp}> Sign Up</button>
             : <></>
         }
         {
-          !user ? <button onClick={login}> log in</button>
-            : <button onClick={logout}> log out</button>
+          !user ? <button onClick={login} className="signin"> log in</button>
+            : <button onClick={logout} className="logout"> log out</button>
         }
+
+          </div>
+        
        </div>
     </div>
     </div>
