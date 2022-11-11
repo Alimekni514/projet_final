@@ -6,6 +6,16 @@ import rateContext from "../../contexts/RateContext";
 import { BsThreeDots } from "react-icons/bs";
 import { useRef } from "react";
 import { useContext } from "react";
+const stylerate= {
+  top: {
+      color:"green",
+      borderColor:"green"
+  } ,
+  medium:{
+    color:"yellow",
+    borderColor:"yellow",
+  }
+}
 
 export default function Container({ img, title, rate, desc, id }) {
   
@@ -20,7 +30,7 @@ export default function Container({ img, title, rate, desc, id }) {
     setIsOpen(false);
   };
 
-  
+  const s=(rate > 7)?stylerate.top:stylerate.medium;
 
   return (
     <div className="movie">
@@ -29,7 +39,7 @@ export default function Container({ img, title, rate, desc, id }) {
       </div>
       <div className="media-info">
         <h3> {title}</h3>
-        <span> {rate} </span>
+        <span  className="voterate" style={{border:"1px solid",...s}}> {rate} </span>
         {
           <input
             style={{ display: "none" }}

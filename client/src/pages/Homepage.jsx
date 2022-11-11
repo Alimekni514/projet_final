@@ -33,7 +33,6 @@ console.log(TopRated)
       const populardata = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=b3ec5aad46e51258856256128c47b00c&language=en-US&page=2")
       const res4 = await populardata.json();
       const popular = res4.results;
-
       var url4 = popular.map(movie => ({ ...movie, img: `https://image.tmdb.org/t/p/original/${movie.poster_path}` }));
       setUrl4(url4)
 
@@ -56,9 +55,9 @@ console.log(TopRated)
           <Navbar />
         </div>
       </div >
-      <SwiperContainer heading={"Popular Movie"} list={url1} ></SwiperContainer>
-      <SwiperContainer heading={"Popular Movie"} list={url2} ></SwiperContainer>
-      <SwiperContainer heading={"Popular Movie"} list={url3} ></SwiperContainer>
+      <SwiperContainer heading={"Top Rated"} list={url1} ></SwiperContainer>
+      <SwiperContainer heading={"Playing Now"} list={url2} ></SwiperContainer>
+      <SwiperContainer heading={"Up Coming"} list={url3} ></SwiperContainer>
       <SwiperContainer heading={"Popular Movie"} list={url4} ></SwiperContainer>
 
     </div>
