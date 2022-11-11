@@ -16,9 +16,12 @@ body {
 }
 
 video {
-  width: 50%;
-  height: 50%;
-  object-fit: contain;
+  height: 100vh;
+  width: 100vw;
+   object-fit: cover;
+   position: relative;
+  pointer-events:none;
+ 
 }
 
 .content {
@@ -27,6 +30,7 @@ video {
   height: 100%;
   top: 0;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   color: white;
 }

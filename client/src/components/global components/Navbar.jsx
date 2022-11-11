@@ -26,7 +26,7 @@ export default function Navbar() {
     <div className='navbar_main'>
       
       <div className="netflix_logo">
-        <img src="https://thewhitonline.com/wp-content/uploads/2020/09/netflix-logo.png" alt="neflix_logo" height="60px"></img>
+        <span> MediaHub </span>
       </div>
       <div className="nav_right">
         <div className='navlinks'>

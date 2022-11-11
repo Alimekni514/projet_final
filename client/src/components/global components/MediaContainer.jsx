@@ -104,7 +104,7 @@ export default function MediaContainer({ img, title, rate, desc, id }) {
             <button onClick={hideModal}>Cancel</button>
           </Modal.Footer>
         </Modal>
-        <p> {desc}</p>
+       
       </div>
     </div>
   );

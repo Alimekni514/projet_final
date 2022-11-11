@@ -1,7 +1,7 @@
 import React from 'react'
 import {Navbar} from '../components/global components/index'
 import style from './style.css'
-import dahmer from '../img/dahmer.mp4'
+import crown from '../img/crown.mp4'
 import {SwiperContainer} from '../components/homepage/index'
 import { useEffect, useState } from 'react'
 export default function Homepage() {
@@ -14,7 +14,7 @@ export default function Homepage() {
       const topdata = await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=b3ec5aad46e51258856256128c47b00c&language=en-US&page=2")
       const res1 = await topdata.json();
       const TopRated = res1.results;
-
+console.log(TopRated)
       var url1 = TopRated.map(movie => ({ ...movie, img: `https://image.tmdb.org/t/p/original/${movie.poster_path}` }));
       setUrl1(url1)
       const nowdata = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=b3ec5aad46e51258856256128c47b00c&language=en-US&page=3")
@@ -51,7 +51,7 @@ export default function Homepage() {
     <div>
       <div className='main'>
         <div className="overlay"></div>
-        <video src={dahmer} autoPlay loop muted />
+        <video src={crown} autoPlay loop muted />
         <div className="content">
           <Navbar />
         </div>
