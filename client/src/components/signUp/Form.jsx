@@ -1,10 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import { useNavigate } from 'react-router-dom';
+
 export default function Form() {
     const [username,setusername]=useState('')
     const [password,setpassword]=useState('')
-    const [email,setemail]=useState('')
+    const [email,setemail]=useState('');
+    const navigate = useNavigate();
     const data={username:username,password:password,email:email}
     const HandleClick =()=>{
         fetch('http://localhost:4000/register', {
@@ -16,10 +21,27 @@ export default function Form() {
           })
             .then((response) => response.json())
             .then((data) => {
-              console.log('Success:', data);
+              if(data.error) {
+                const MySwal = withReactContent(Swal)
+                MySwal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: `${data.error}`,
+                })
+              }else {
+                Swal.fire(
+                  'Good job!',
+                  'you have successfully registered!',
+                  'success'
+                )
+                setTimeout(()=> {
+                  navigate("/SignIn");
+                },1000);
+                
+              }
             })
             .catch((error) => {
-              console.error('Error:', error);
+             console.log(error);
             });
     }
 
@@ -34,7 +56,7 @@ export default function Form() {
           <label className="login__group__label">Username</label>
         </div>
         <div className="login__group">
-          <input className="login__group__input" type="text"value={email} onChange={(e)=>setemail(e.target.value)} required />
+          <input className="login__group__input" type="e-mail"value={email} onChange={(e)=>setemail(e.target.value)} required />
           <label className="login__group__label">Email or phone number</label>
         </div>
         <div className="login__group">

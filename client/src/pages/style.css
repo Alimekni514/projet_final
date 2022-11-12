@@ -13,17 +13,7 @@ body {
 .main {
   width: 100%;
   height: 100vh;
-}
-
-.main video {
-  padding: 0;
-  margin:0;
-  height: 100%;
-  width: 100%;
-   object-fit: cover;
-   position: relative;
-  pointer-events:none;
- 
+  position: relative;
 }
 
 .content {
@@ -63,4 +53,30 @@ body {
 }
 .heading {
   padding: 10px 40px;
+}
+.video-react-control-bar ,.video-react-loading-spinner{
+  display: none !important;;
+
+}
+.video-react-button ,.video-react-big-play-button ,.video-react-big-play-button-left ,.big-play-button-hide{
+  display: none !important;;
+
+}
+.video-react-video{
+  padding: 0 !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  height: 100% !important;;
+  width: 100% !important;
+  position: absolute ;
+  top:0;
+  
+}
+.overr{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  z-index: 20;
+  color: white;
 }

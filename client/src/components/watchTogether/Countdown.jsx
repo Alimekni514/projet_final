@@ -9,7 +9,7 @@ function Countdown(){
         const seconds = Time.getSeconds();
         const minutes = Time.getMinutes();
         let hours = Time.getHours();
-        const addminutes=minutes +1;
+        const addminutes=minutes +2;
         const year=Time.getFullYear();
         const month=Time.getMonth() ;
         const day=Time.getDate();
@@ -59,7 +59,7 @@ function Countdown(){
     });
    
     return(
-        <div className="row">
+        <div className="row ">
             <div className="col-sm-6">
             <div className="btn-group my-3">
             {expiryTime!==false?
