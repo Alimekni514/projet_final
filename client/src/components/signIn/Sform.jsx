@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+// import Swal from 'sweetalert2';
+// import withReactContent from 'sweetalert2-react-content';
 import userContext from '../../contexts/UserContext';
 import io from "socket.io-client";
 var reqotoken;
@@ -101,17 +101,17 @@ function Sform() {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          const MySwal = withReactContent(Swal)
-          MySwal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: `${data.error}`,
-          })
-          // alert(`Error:${data.error}`)
-        }
+      // .then((response) => response.json())
+      // .then((data) => {
+      //   if (data.error) {
+      //     const MySwal = withReactContent(Swal)
+      //     MySwal.fire({
+      //       icon: 'error',
+      //       title: 'Oops...',
+      //       text: `${data.error}`,
+      //     })
+      //     // alert(`Error:${data.error}`)
+      //   }
         else {
           localStorage.setItem("token", data.token);
           navigate("/");

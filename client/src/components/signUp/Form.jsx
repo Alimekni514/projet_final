@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-import { useNavigate } from 'react-router-dom';
+// import Swal from 'sweetalert2';
+// import withReactContent from 'sweetalert2-react-content';
+// import { useNavigate } from 'react-router-dom';
+
 export default function Form() {
     const [username,setusername]=useState('')
     const [password,setpassword]=useState('')
@@ -18,27 +19,27 @@ export default function Form() {
             },
             body: JSON.stringify(data),
           })
-            .then((response) => response.json())
-            .then((data) => {
-              if(data.error) {
-                const MySwal = withReactContent(Swal)
-                MySwal.fire({
-                  icon: 'error',
-                  title: 'Oops...',
-                  text: `${data.error}`,
-                })
-              }else {
-                Swal.fire(
-                  'Good job!',
-                  'you have successfully registered!',
-                  'success'
-                )
-                setTimeout(()=> {
-                  navigate("/SignIn");
-                },1000);
+            // .then((response) => response.json())
+            // .then((data) => {
+            //   if(data.error) {
+            //     const MySwal = withReactContent(Swal)
+            //     MySwal.fire({
+            //       icon: 'error',
+            //       title: 'Oops...',
+            //       text: `${data.error}`,
+            //     })
+            //   }else {
+            //     Swal.fire(
+            //       'Good job!',
+            //       'you have successfully registered!',
+            //       'success'
+            //     )
+            //     setTimeout(()=> {
+            //       navigate("/SignIn");
+            //     },1000);
                 
-              }
-            })
+            //   }
+            // })
             .catch((error) => {
              console.log(error);
             });
