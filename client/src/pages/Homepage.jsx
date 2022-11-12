@@ -68,7 +68,7 @@ console.log(TopRated)
       <SwiperContainer heading={"Up Coming"} list={url3} ></SwiperContainer>
       <SwiperContainer heading={"Popular Movie"} list={url4} ></SwiperContainer>
       <Footer/>
-      <Video/>
+      {/* <Video/> */}
     </div>
   )
 }

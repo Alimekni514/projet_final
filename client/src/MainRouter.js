@@ -22,7 +22,7 @@ export default function MainRouter() {
                 <Routes>
                     <Route path="/" element={<Homepage />} />
                     <Route path="/TvShows" element={
-                     <ProtectedRoute user={user}>
+                    <ProtectedRoute user={user}>
                     <TvShows />
                     </ProtectedRoute>
                 } />

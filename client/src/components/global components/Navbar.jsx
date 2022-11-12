@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import userContext from '../../contexts/UserContext';
-import { FaSearch } from 'react-icons/fa'
-import style from './style.css'
+import { FaSearch } from 'react-icons/fa';
+import style from './style.css';
+import balti from "../../img/balti.png";
 import { useState } from 'react';
 import SearchBar from './SearchBar';
 export default function Navbar() {
@@ -25,8 +26,9 @@ export default function Navbar() {
   return (
     <div className='navbar_main'>
       
-      <div className="netflix_logo">
-        <span> MediaHub </span>
+      <div className="netflix_logo" style={{display:"flex",alignItems:"center"}}>
+          <img src={balti} alt="logo" style={{width:"60px"}}/>
+          <span style={{marginRight:"10px"}}>edia Hub</span> 
       </div>
       <div className="nav_right">
         <div className='navlinks'>

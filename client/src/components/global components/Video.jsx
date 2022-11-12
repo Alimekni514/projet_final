@@ -1,20 +1,9 @@
-import React from 'react'
-
-import ReactPlayer from 'react-player'
-import crown from '../../img/crown.jpg'
-import crownn from '../../img/crown.mp4'
-
-import { Player } from 'video-react';
+import React from 'react';
+import crown from '../../img/crown.jpg';
+import crownn from '../../img/crown.mp4';
 export default  function Video() {
   return (
-    <div>
- <Player
-      muted
-      playsInline
-      poster={crown}
-      src={crownn}
-    />
-    </div>
+   <h1>hello world</h1>
  
   )
 }

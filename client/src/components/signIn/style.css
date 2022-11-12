@@ -85,6 +85,17 @@
     display: flex;
     justify-content: space-between;
   }
+  .swal2-popup {
+    height: 500px !important;
+    width: 29em !important;
+    background-color:black  !important;
+  }
+  .swal2-styled.swal2-confirm {
+    margin-bottom: 90px;
+    background-color: rgb(20, 88, 20)!important ;
+    padding:12px 50px !important;
+  }
+  
   .body .login__secondary-cta__text {
     opacity: 1;
     font-size: 0.9rem;
