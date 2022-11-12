@@ -17,7 +17,7 @@ const stylerate= {
             }
 }
 
-export default function MediaContainer({ img, title, rate, desc, id }) {
+export default function MediaContainer({ img, title, rate, desc, id ,tvname}) {
   const { ratee, setRate } = useContext(rateContext);
   const inputrate = useRef();
   const mediaid = useRef();
@@ -73,7 +73,9 @@ export default function MediaContainer({ img, title, rate, desc, id }) {
         <img src={img} alt="Movie/serie-pic" />
       </div>
       <div className="media-info">
-        <h3> {title}</h3>
+        <h3>
+          
+           {!title ?tvname:title}</h3>
        <span  className="voterate" style={{border:"1px solid",...s}}> {rate} </span>
         {
           <input

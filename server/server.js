@@ -46,12 +46,12 @@ server.listen(4000, () => {
 });
 
 /* poll*/
-const pollData = require("./data.json");
-app.get("/poll", function (req, res) {
-  res.send(pollData);
+const pollData1 = require("./data.json");
+app.get("/poll1", function (req, res) {
+  res.send(pollData1);
 });
 
-app.post("/poll", function (req, res) {  
+app.post("/poll1", function (req, res) {  
   if (req.body) {
     fs.writeFileSync("data.json", JSON.stringify(req.body));
     res.send({
@@ -63,4 +63,55 @@ app.post("/poll", function (req, res) {
     });
   }
 });
+const pollData2 = require("./data1.json");
+app.get("/poll2", function (req, res) {
+  res.send(pollData2);
+});
 
+app.post("/poll2", function (req, res) {  
+  if (req.body) {
+    fs.writeFileSync("data1.json", JSON.stringify(req.body));
+    res.send({
+      message: "Data Saved",
+    });
+  } else {
+    res.status(400).send({
+      message: "Error No Data",
+    });
+  }
+});
+const pollData3 = require("./data2.json");
+app.get("/poll3", function (req, res) {
+  res.send(pollData3);
+});
+
+app.post("/poll3", function (req, res) {  
+  if (req.body) {
+    fs.writeFileSync("data2.json", JSON.stringify(req.body));
+    res.send({
+      message: "Data Saved",
+    });
+  } else {
+    res.status(400).send({
+      message: "Error No Data",
+    });
+  }
+});
+
+const pollData4 = require("./data3.json");
+app.get("/poll4", function (req, res) {
+  res.send(pollData4);
+});
+
+app.post("/poll4", function (req, res) {  
+  if (req.body) {
+    fs.writeFileSync("data3.json", JSON.stringify(req.body));
+    res.send({
+      message: "Data Saved",
+    });
+  } else {
+    res.status(400).send({
+      message: "Error No Data",
+    });
+  }
+});

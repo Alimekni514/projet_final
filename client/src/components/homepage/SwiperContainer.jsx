@@ -27,8 +27,8 @@ export default function SwiperContainer({ heading, list }) {
             list.map(movie =>
               <SwiperSlide key={movie.id}>
                 {
-                  !user ? <Container title={movie.title} rate={movie.vote_average} desc={movie.overview} id={movie.id} img={`https://image.tmdb.org/t/p/original/${movie.poster_path} `} />: 
-                <MediaContainer title={movie.title} rate={movie.vote_average} desc={movie.overview} id={movie.id} img={`https://image.tmdb.org/t/p/original/${movie.poster_path} `} />
+                  !user ? <Container title={movie.title} rate={movie.vote_average} tvname={movie.name} desc={movie.overview} id={movie.id} img={`https://image.tmdb.org/t/p/original/${movie.poster_path} `} />: 
+                <MediaContainer title={movie.title} rate={movie.vote_average} tvname={movie.name} desc={movie.overview} id={movie.id} img={`https://image.tmdb.org/t/p/original/${movie.poster_path} `} />
 
                 }
 

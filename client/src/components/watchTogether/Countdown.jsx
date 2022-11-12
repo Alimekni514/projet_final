@@ -1,6 +1,6 @@
 import { useEffect, useState} from "react";
 import dahmer from '../../img/dahmer.mp4'
-
+import Stream from "./Stream";
 
 function Countdown(){
    
@@ -68,7 +68,7 @@ function Countdown(){
                 <button type="button" className="btn btn-success">:</button>
                 <button type="button" className="btn btn-outline-success">{countdownTime.countdownSeconds} <sub>Seconds</sub></button>
                 </>
-                :<video className="videostreaming" src={dahmer} autoPlay loop muted />}
+                :<Stream/>}
          </div>
             </div>
         </div>

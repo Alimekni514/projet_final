@@ -27,7 +27,7 @@
     width: 210px;
     height: 40px;
     margin: 7px;
-    border: 2px solid #43a047;
+    border: 2px solid rgba(33, 33, 33, 0.98);;
     border-radius: 5px;
     padding: 5px;
     font-size: 16px;
@@ -41,26 +41,29 @@
     border-radius: 5px;
     padding: 5px;
     font-size: 16px;
-    background: #43a047;
+    background: ;
     color: #fff;
     cursor: pointer;
   }
   
   .joinChatContainer button:hover {
-    background: #2e7d32;
+    background: white;
   }
   
   .chat-window {
-    margin-top: 50px;
+    margin-top: 19px;
     width: 500px;
     height: 500px;
+    margin-left: 20px;
+    margin-right: 15px;
+
   }
   
   .chat-window p {
     margin: 0;
   }
   .chat-window .chat-header {
-    height: 45px;
+    height: 41px;
     border-radius: 4px;
     background: #1e262a;
     position: relative;
@@ -75,7 +78,7 @@
   
   .chat-window .chat-body {
    /* height: calc(450px - (45px + 70px));*/
-   height:450px;
+   height:420px;
     border: 1px solid #263238;
     background:black;
     position: relative;
@@ -97,11 +100,10 @@
   }
   
   .chat-window .chat-body .message .message-content {
-    width: auto;
     height: auto;
     min-height: 40px;
-    max-width: 120px;
-    background-color: #43a047;
+    width: 300px !important;
+    background-color: rgba(33, 33, 33, 0.98);;
     border-radius: 5px;
     color: white;
     display: flex;
@@ -119,7 +121,10 @@
   }
   
   #you .message-content {
+    padding:10px;
     justify-content: flex-start;
+    background-color: rgba(33, 33, 33, 0.98);
+   
   }
   
   #you .message-meta {
@@ -132,8 +137,11 @@
   }
   
   #other .message-content {
+    padding:10px;
     justify-content: flex-end;
-    background-color: cornflowerblue;
+    background-color: grey;
+    
+    
   }
   
   #other .message-meta {
@@ -143,7 +151,11 @@
   
   .message-meta #author {
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: 500;
+  }
+  .message-meta #time {
+    margin-left: 5px;
+    font-weight: 500;
   }
   
   .chat-window .chat-body .message .message-meta {
@@ -156,8 +168,13 @@
     border: 1px solid #263238;
     border-top: none;
     display: flex;
+   
   }
+  .chat-window .chat-footer input::placeholder{
+   font-size: 16px;
   
+  }
+
   .chat-window .chat-footer input {
     height: 100%;
     flex: 85%;
@@ -165,9 +182,10 @@
     padding: 0 0.7em;
     font-size: 1em;
     border-right: 1px dotted #607d8b;
-  
     outline: none;
-    font-family: "Open Sans", sans-serif;
+    background: #1e262a;
+    color:white;
+    
   }
   
   .chat-window .chat-footer button {
@@ -181,10 +199,11 @@
     outline: none;
     font-size: 25px;
     color: lightgray;
+    padding-bottom: 10px;
   }
   
   .chat-window .chat-footer button:hover {
-    color: #43a047;
+    color: grey;
   }
   .hide {
     opacity: 0 !important;

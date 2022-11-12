@@ -6,6 +6,7 @@ import { Chat } from "../components/watchTogether/index"
 import { Navbar } from '../components/global components/index'
 import { Countdown } from "../components/watchTogether/index";
 import { useContext} from "react";
+import Program from "../components/watchTogether/Program";
 export default function WatchTogether() {
   
   const socket = io.connect("http://localhost:4000");
@@ -16,7 +17,7 @@ export default function WatchTogether() {
     localStorage.setItem('roomid', room)
   };
   return (
-    <div>
+    <div style={{ color:'white'}}>
       
       {joinRoom()}
       <Navbar />
@@ -24,7 +25,11 @@ export default function WatchTogether() {
       <Countdown/>    
       <Chat socket={socket} username={user} room={localStorage.getItem('roomid')} />
       </div>
+      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',position:'relative'}}>
       <MoviePoll/>
+      <Program/>
+      </div>
+    
     </div>
   );
 

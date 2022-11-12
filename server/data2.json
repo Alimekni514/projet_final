@@ -1,0 +1,25 @@
+[
+
+
+
+    {
+        "id": 0,
+        "votes": 4,
+        "option": "Avengers: Endgame"
+    },
+    {
+        "id": 1,
+        "votes": 1,
+        "option": "Inglourious Basterds"
+    },
+    {
+        "id": 2,
+        "votes": 2,
+        "option": "Toy Story"
+    },
+    {
+        "id": 3,
+        "votes": 0,
+        "option": "Will Hunting"
+    }
+]
