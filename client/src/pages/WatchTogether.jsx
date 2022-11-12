@@ -23,9 +23,7 @@ export default function WatchTogether() {
       <div style={{display:'flex', justifyContent:'space-between'}}>   
       <Countdown/>    
       <Chat socket={socket} username={user} room={localStorage.getItem('roomid')} />
-      
       </div>
-      
       <MoviePoll/>
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react'
 import {Navbar} from '../components/global components/index'
 import style from './style.css'
 import dahmer from '../img/dahmer.mp4'
+import Footer from '../components/global components/Footer'
 import {SwiperContainer} from '../components/homepage/index'
 import { useEffect, useState } from 'react'
 export default function TvShows() {
@@ -60,7 +61,7 @@ export default function TvShows() {
       <SwiperContainer heading={"Popular Tv Shows Now"} list={url2} ></SwiperContainer>
       <SwiperContainer heading={"Airing Now Tv Shows"} list={url3} ></SwiperContainer>
       <SwiperContainer heading={"Top rated Tv Shows"} list={url4} ></SwiperContainer>
-
+       <Footer/>
     </div>
   )
 }

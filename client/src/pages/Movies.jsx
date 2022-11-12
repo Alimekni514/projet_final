@@ -1,5 +1,7 @@
 import React from 'react'
 import {Navbar} from '../components/global components/index'
+import Footer from '../components/global components/Footer'
+
 import style from './style.css'
 import dahmer from '../img/dahmer.mp4'
 import {SwiperContainer} from '../components/homepage/index'
@@ -60,7 +62,7 @@ export default function Movies() {
       <SwiperContainer heading={"Popular Movie"} list={url2} ></SwiperContainer>
       <SwiperContainer heading={"Popular Movie"} list={url3} ></SwiperContainer>
       <SwiperContainer heading={"Popular Movie"} list={url4} ></SwiperContainer>
-
+      <Footer/>
     </div>
   )
 }

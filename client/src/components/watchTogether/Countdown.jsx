@@ -68,7 +68,7 @@ function Countdown(){
                 <button type="button" className="btn btn-success">:</button>
                 <button type="button" className="btn btn-outline-success">{countdownTime.countdownSeconds} <sub>Seconds</sub></button>
                 </>
-                :<video src={dahmer} autoPlay loop muted />}
+                :<video className="videostreaming" src={dahmer} autoPlay loop muted />}
          </div>
             </div>
         </div>

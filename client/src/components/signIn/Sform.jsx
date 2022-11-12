@@ -1,5 +1,6 @@
-
+import style from './style.css'
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
@@ -119,10 +120,24 @@ function Sform() {
       });
   }
   return (
-    <div>
-      password:<input type="password" value={password} onChange={(e) => setpassword(e.target.value)} />
-      email:<input type="e-mail" value={email} onChange={(e) => setemail(e.target.value)} />
-      <button onClick={HandleClick}> SIGN IN</button>
+    <div className='body'>
+      <a className="logo" href="https://www.netflix.com/" target="_blank"><img src="https://bit.ly/2VdIFUK" /></a>
+      <div className="login">
+        <h1 className="login__title">Sign In</h1>
+        <div className="login__group">
+          <input className="login__group__input" type="text" value={email} onChange={(e) => setemail(e.target.value)} required />
+          <label className="login__group__label">Email or phone number</label>
+        </div>
+        <div className="login__group">
+          <input className="login__group__input" type="password" value={password} onChange={(e) => setpassword(e.target.value)} required />
+          <label className="login__group__label">Password</label>
+        </div>
+        <button className="login__sign-in" onClick={HandleClick} type="button">Sign In</button>
+        <div className="login__secondary-cta">
+        <NavLink className="login__secondary-cta__text" to={'/SignUp'}> Register </NavLink>
+          <a className="login__secondary-cta__text login__secondary-cta__text--need-help" href="#">Need help?</a></div>
+      </div>
+
     </div>
   )
 }
